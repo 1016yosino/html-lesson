@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="no-js ie7" lang="ja" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 lt-ie8" lang="ja" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie9 lt-ie9" lang="ja" prefix="og: http://ogp.me/ns#"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="ja" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+<meta name="theme-color" content="#ffffff">
+
+	<!-- This site is optimized with the Yoast SEO plugin v16.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>要素の配置ルールとカテゴリー | HTML 入門 | レッスン | CreatorQuest</title>
+	<meta name="description" content="HTMLの各要素には配置ルールが存在します。これは「〇〇要素の中には△△要素が配置できる」といった配置に関するルールです。HTML5ではこれを「コンテンツ・モデル」言います。コンテンツ・モデルの多くは、要素のカテゴリーで指定されています。" />
+	<link rel="canonical" href="https://creatorquest.jp/lessons/html/category-and-rule/" />
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="要素の配置ルールとカテゴリー | HTML 入門 | レッスン | CreatorQuest" />
+	<meta property="og:description" content="HTMLの各要素には配置ルールが存在します。これは「〇〇要素の中には△△要素が配置できる」といった配置に関するルールです。HTML5ではこれを「コンテンツ・モデル」言います。コンテンツ・モデルの多くは、要素のカテゴリーで指定されています。" />
+	<meta property="og:url" content="https://creatorquest.jp/lessons/html/category-and-rule/" />
+	<meta property="og:site_name" content="CreatorQuest" />
+	<meta property="article:publisher" content="https://www.facebook.com/CreatorQuest/" />
+	<meta property="article:modified_time" content="2017-07-18T03:36:26+00:00" />
+	<meta property="og:image" content="https://creatorquest.jp/wp/wp-content/uploads/2016/11/html05.png" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1080" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@Creator_Quest" />
+	<meta name="twitter:label1" content="推定読書時間" />
+	<meta name="twitter:data1" content="1分" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://creatorquest.jp/#website","url":"https://creatorquest.jp/","name":"CreatorQuest","description":"\u4f1d\u8aac\u306eWEB\u30af\u30ea\u30a8\u30fc\u30bf\u30fc\u3092\u76ee\u6307\u3059\u5192\u967a\u3092\u59cb\u3081\u3088\u3046\uff01","potentialAction":[{"@type":"SearchAction","target":"https://creatorquest.jp/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"ja"},{"@type":"ImageObject","@id":"https://creatorquest.jp/lessons/html/category-and-rule/#primaryimage","inLanguage":"ja","url":"https://creatorquest.jp/wp/wp-content/uploads/2016/11/html05.png","contentUrl":"https://creatorquest.jp/wp/wp-content/uploads/2016/11/html05.png","width":1920,"height":1080,"caption":"\u914d\u7f6e\u30eb\u30fc\u30eb\u3068\u30ab\u30c6\u30b4\u30ea"},{"@type":"WebPage","@id":"https://creatorquest.jp/lessons/html/category-and-rule/#webpage","url":"https://creatorquest.jp/lessons/html/category-and-rule/","name":"\u8981\u7d20\u306e\u914d\u7f6e\u30eb\u30fc\u30eb\u3068\u30ab\u30c6\u30b4\u30ea\u30fc | HTML \u5165\u9580 | \u30ec\u30c3\u30b9\u30f3 | CreatorQuest","isPartOf":{"@id":"https://creatorquest.jp/#website"},"primaryImageOfPage":{"@id":"https://creatorquest.jp/lessons/html/category-and-rule/#primaryimage"},"datePublished":"2016-11-01T14:40:20+00:00","dateModified":"2017-07-18T03:36:26+00:00","description":"HTML\u306e\u5404\u8981\u7d20\u306b\u306f\u914d\u7f6e\u30eb\u30fc\u30eb\u304c\u5b58\u5728\u3057\u307e\u3059\u3002\u3053\u308c\u306f\u300c\u3007\u3007\u8981\u7d20\u306e\u4e2d\u306b\u306f\u25b3\u25b3\u8981\u7d20\u304c\u914d\u7f6e\u3067\u304d\u308b\u300d\u3068\u3044\u3063\u305f\u914d\u7f6e\u306b\u95a2\u3059\u308b\u30eb\u30fc\u30eb\u3067\u3059\u3002HTML5\u3067\u306f\u3053\u308c\u3092\u300c\u30b3\u30f3\u30c6\u30f3\u30c4\u30fb\u30e2\u30c7\u30eb\u300d\u8a00\u3044\u307e\u3059\u3002\u30b3\u30f3\u30c6\u30f3\u30c4\u30fb\u30e2\u30c7\u30eb\u306e\u591a\u304f\u306f\u3001\u8981\u7d20\u306e\u30ab\u30c6\u30b4\u30ea\u30fc\u3067\u6307\u5b9a\u3055\u308c\u3066\u3044\u307e\u3059\u3002","breadcrumb":{"@id":"https://creatorquest.jp/lessons/html/category-and-rule/#breadcrumb"},"inLanguage":"ja","potentialAction":[{"@type":"ReadAction","target":["https://creatorquest.jp/lessons/html/category-and-rule/"]}]},{"@type":"BreadcrumbList","@id":"https://creatorquest.jp/lessons/html/category-and-rule/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"\u30db\u30fc\u30e0","item":"https://creatorquest.jp/"},{"@type":"ListItem","position":2,"name":"\u30ec\u30c3\u30b9\u30f3","item":"https://creatorquest.jp/lessons/"},{"@type":"ListItem","position":3,"name":"HTML \u5165\u9580","item":"https://creatorquest.jp/lessons/html/"},{"@type":"ListItem","position":4,"name":"\u8981\u7d20\u306e\u914d\u7f6e\u30eb\u30fc\u30eb\u3068\u30ab\u30c6\u30b4\u30ea\u30fc"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="stylesheet" href="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/css/common.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700">
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="apple-touch-icon" sizes="180x180" href="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/manifest.json">
+<link rel="mask-icon" href="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/safari-pinned-tab.svg" color="#00bcd4">
+<link rel='stylesheet' id='wp-block-library-css'  href='https://creatorquest.jp/wp/wp-includes/css/dist/block-library/style.min.css?ver=5.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='ligature-symbols-css'  href='https://creatorquest.jp/wp/wp-content/plugins/gianism/assets/css/lsf.css?ver=2.11' type='text/css' media='all' />
+<link rel='stylesheet' id='gianism-css'  href='https://creatorquest.jp/wp/wp-content/plugins/gianism/assets/css/gianism-style.css?ver=4.4.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/lib/jquery-1.12.1.min.js' id='jquery-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/plugins/theme-my-login/modules/themed-profiles/themed-profiles.js?ver=5.8.3' id='tml-themed-profiles-js'></script>
+<link rel="https://api.w.org/" href="https://creatorquest.jp/wp-json/" /><link rel='shortlink' href='https://creatorquest.jp/?p=37' />
+<link rel="alternate" type="application/json+oembed" href="https://creatorquest.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcreatorquest.jp%2Flessons%2Fhtml%2Fcategory-and-rule%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://creatorquest.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcreatorquest.jp%2Flessons%2Fhtml%2Fcategory-and-rule%2F&#038;format=xml" />
+</head>
+<body class="is-single">
+<svg class="defs is-hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+  <symbol id="logo-primary" viewBox="0 0 176.2 24" style="enable-background:new 0 0 176.2 24;" xml:space="preserve">
+    <g>
+      <path class="st0" d="M43.6,4.3v3.1c-1.5-1.3-3.1-1.9-4.7-1.9c-1.8,0-3.3,0.6-4.5,1.9c-1.2,1.3-1.8,2.8-1.8,4.7
+                           c0,1.8,0.6,3.4,1.8,4.6c1.2,1.3,2.7,1.9,4.5,1.9c0.9,0,1.7-0.1,2.3-0.4c0.4-0.1,0.7-0.4,1.1-0.6c0.4-0.3,0.8-0.6,1.2-0.9v3.2
+                           c-1.5,0.8-3.1,1.3-4.7,1.3c-2.5,0-4.6-0.9-6.3-2.6c-1.7-1.7-2.6-3.9-2.6-6.3c0-2.2,0.7-4.2,2.2-5.9c1.8-2.1,4.1-3.2,7-3.2
+                           C40.6,3,42.1,3.4,43.6,4.3z"/>
+      <path class="st0" d="M46.7,9.7h2.5v1c0.5-0.5,0.9-0.8,1.2-1c0.4-0.2,0.8-0.3,1.3-0.3c0.7,0,1.4,0.2,2.1,0.7l-1.2,2.3
+                           c-0.5-0.3-0.9-0.5-1.4-0.5c-1.4,0-2.1,1-2.1,3.1v5.7h-2.5V9.7z"/>
+      <path class="st0" d="M65.5,15.8h-7.8c0.1,0.9,0.4,1.6,0.9,2.1c0.5,0.5,1.2,0.8,2,0.8c0.6,0,1.1-0.1,1.6-0.4
+                           c0.4-0.3,0.9-0.9,1.4-1.7l2.1,1.2c-0.3,0.6-0.7,1-1,1.4c-0.4,0.4-0.8,0.7-1.2,1c-0.4,0.3-0.9,0.4-1.4,0.6c-0.5,0.1-1,0.2-1.6,0.2
+                           c-1.6,0-2.9-0.5-3.9-1.6c-1-1.1-1.5-2.5-1.5-4.2c0-1.7,0.5-3.1,1.4-4.2c1-1.1,2.2-1.6,3.8-1.6c1.6,0,2.9,0.5,3.8,1.5
+                           c0.9,1,1.4,2.4,1.4,4.2L65.5,15.8z M62.9,13.7c-0.4-1.3-1.2-2-2.6-2c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4
+                           s-0.4,0.4-0.6,0.6c-0.2,0.2-0.3,0.5-0.4,0.8H62.9z"/>
+      <path class="st0" d="M76.6,9.7h2.5v10.9h-2.5v-1.1c-1,1-2.2,1.5-3.4,1.5c-1.5,0-2.8-0.5-3.8-1.6c-1-1.1-1.5-2.5-1.5-4.2
+                           c0-1.6,0.5-3,1.5-4.1c1-1.1,2.2-1.6,3.7-1.6c1.3,0,2.4,0.5,3.4,1.6V9.7z M70.6,15.2c0,1,0.3,1.9,0.8,2.6c0.6,0.7,1.3,1,2.2,1
+                           c0.9,0,1.7-0.3,2.3-1c0.6-0.7,0.9-1.5,0.9-2.5c0-1-0.3-1.9-0.9-2.5c-0.6-0.7-1.3-1-2.2-1c-0.9,0-1.6,0.3-2.2,1
+                           C70.9,13.4,70.6,14.2,70.6,15.2z"/>
+      <path class="st0" d="M86.1,12.1v8.6h-1.3h-1.2v-8.6h-1.1V9.7h1.1v-4h2.5v4h2v2.4H86.1z"/>
+      <path class="st0" d="M90.4,15.1c0-1.6,0.6-2.9,1.7-4c1.1-1.1,2.5-1.7,4.1-1.7c1.6,0,3,0.6,4.2,1.7c1.1,1.1,1.7,2.5,1.7,4.1
+                           c0,1.6-0.6,3-1.7,4.1c-1.1,1.1-2.5,1.7-4.2,1.7c-1.6,0-3-0.6-4.1-1.7C90.9,18.2,90.4,16.8,90.4,15.1z M93,15.2c0,1.1,0.3,2,0.9,2.6
+                           c0.6,0.6,1.4,1,2.4,1c1,0,1.8-0.3,2.4-1c0.6-0.6,0.9-1.5,0.9-2.6c0-1.1-0.3-1.9-0.9-2.6c-0.6-0.6-1.4-1-2.4-1c-1,0-1.7,0.3-2.3,1
+                           C93.3,13.3,93,14.2,93,15.2z"/>
+      <path class="st0" d="M105,9.7h2.5v1c0.5-0.5,0.9-0.8,1.2-1c0.4-0.2,0.8-0.3,1.3-0.3c0.7,0,1.4,0.2,2.1,0.7l-1.2,2.3
+                           c-0.5-0.3-0.9-0.5-1.4-0.5c-1.4,0-2.1,1-2.1,3.1v5.7H105V9.7z"/>
+      <path class="st0" d="M132.6,21h-3.3l-1.4-1.4c-1.4,0.9-3.1,1.4-4.8,1.4c-2.3,0-4.3-0.8-6.1-2.3c-1.9-1.7-2.9-3.9-2.9-6.6
+                           c0-2.6,0.9-4.8,2.8-6.5c1.8-1.7,3.9-2.5,6.3-2.5c2.2,0,4.2,0.7,5.9,2.2c2.1,1.8,3.1,4.1,3.1,7c0,2.2-0.8,4.2-2.5,6L132.6,21z
+                           M125.4,13.8l2.5,2.5c1.1-1.2,1.7-2.6,1.7-4.3c0-1.9-0.6-3.4-1.9-4.7c-1.2-1.3-2.8-1.9-4.6-1.9c-1.9,0-3.4,0.6-4.6,1.9
+                           c-1.2,1.3-1.8,2.8-1.8,4.8c0,1.9,0.6,3.4,1.9,4.6c1.3,1.2,2.8,1.8,4.4,1.8c1.1,0,2.2-0.3,3.1-0.8l-4.1-4H125.4z"/>
+      <path class="st0" d="M137.8,9.7V16c0,1.8,0.7,2.7,2.1,2.7c1.4,0,2.1-0.9,2.1-2.7V9.7h2.5v6.3c0,0.9-0.1,1.6-0.3,2.3
+                           c-0.2,0.6-0.6,1.1-1.1,1.5c-0.9,0.7-1.9,1.1-3.3,1.1c-1.3,0-2.4-0.4-3.2-1.1c-0.5-0.5-0.9-1-1.1-1.5c-0.2-0.5-0.3-1.3-0.3-2.3V9.7
+                           H137.8z"/>
+      <path class="st0" d="M158.1,15.8h-7.8c0.1,0.9,0.4,1.6,0.9,2.1c0.5,0.5,1.2,0.8,2,0.8c0.6,0,1.1-0.1,1.6-0.4
+                           c0.4-0.3,0.9-0.9,1.4-1.7l2.1,1.2c-0.3,0.6-0.7,1-1,1.4c-0.4,0.4-0.8,0.7-1.2,1c-0.4,0.3-0.9,0.4-1.4,0.6c-0.5,0.1-1,0.2-1.6,0.2
+                           c-1.6,0-2.9-0.5-3.9-1.6c-1-1.1-1.5-2.5-1.5-4.2c0-1.7,0.5-3.1,1.4-4.2c1-1.1,2.2-1.6,3.8-1.6c1.6,0,2.9,0.5,3.8,1.5
+                           c0.9,1,1.4,2.4,1.4,4.2L158.1,15.8z M155.5,13.7c-0.4-1.3-1.2-2-2.6-2c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4
+                           c-0.2,0.2-0.4,0.4-0.6,0.6s-0.3,0.5-0.4,0.8H155.5z"/>
+      <path class="st0" d="M167.5,11.6l-2.1,1.1c-0.3-0.7-0.7-1-1.2-1c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0.2-0.2,0.4-0.2,0.6
+                           c0,0.4,0.5,0.8,1.5,1.2c1.3,0.6,2.2,1.1,2.7,1.6c0.5,0.5,0.7,1.1,0.7,2c0,1.1-0.4,1.9-1.2,2.7c-0.8,0.7-1.7,1-2.7,1
+                           c-1.8,0-3.1-0.9-3.9-2.7l2.2-1c0.3,0.5,0.5,0.9,0.7,1c0.3,0.3,0.7,0.4,1.1,0.4c0.9,0,1.3-0.4,1.3-1.2c0-0.4-0.3-0.9-1-1.3
+                           c-0.3-0.1-0.5-0.3-0.8-0.4c-0.3-0.1-0.5-0.2-0.8-0.4c-0.7-0.4-1.3-0.7-1.6-1.1c-0.4-0.5-0.6-1-0.6-1.8c0-1,0.3-1.7,1-2.4
+                           c0.7-0.6,1.5-0.9,2.4-0.9C165.8,9.4,166.8,10.2,167.5,11.6z"/>
+      <path class="st0" d="M174.2,12.1v8.6h-2.5v-8.6h-1.1V9.7h1.1v-4h2.5v4h2v2.4H174.2z"/>
+    </g>
+    <g>
+      <path class="st1" d="M13,19.1l-0.2,0.2c-0.4,0.4-1.2,0.4-1.6,0l-6.5-6.5c-0.4-0.4-0.4-1.2,0-1.6l6.5-6.5c0.4-0.4,1.2-0.4,1.6,0
+                           l0.1,0.1l2.4-2.4l-1.7-1.7c-0.9-0.9-2.3-0.9-3.2,0l-9.7,9.7c-0.9,0.9-0.9,2.3,0,3.2l9.7,9.7c0.9,0.9,2.3,0.9,3.2,0l1.8-1.8L13,19.1
+                           z"/>
+      <path class="st2" d="M19.4,17.6l3.9-3.9c0.9-0.9,0.9-2.3,0-3.2L16.9,4l-2.4,2.4l4.8,4.8c0.4,0.4,0.4,1.2,0,1.6L17,15.1l-2.4,2.4
+                           l0,0l6.1,6.1c0.4,0.4,1.2,0.4,1.6,0l0.8-0.8c0.4-0.4,0.4-1.2,0-1.6L19.4,17.6z"/>
+    </g>
+  </symbol>
+  <symbol id="logo-white" viewBox="0 0 176.2 24" style="enable-background:new 0 0 176.2 24;" xml:space="preserve">
+    <g>
+      <path class="st4" d="M43.6,4.3v3.1c-1.5-1.3-3.1-1.9-4.7-1.9c-1.8,0-3.3,0.6-4.5,1.9c-1.2,1.3-1.8,2.8-1.8,4.7
+                           c0,1.8,0.6,3.4,1.8,4.6c1.2,1.3,2.7,1.9,4.5,1.9c0.9,0,1.7-0.1,2.3-0.4c0.4-0.1,0.7-0.4,1.1-0.6c0.4-0.3,0.8-0.6,1.2-0.9v3.2
+                           c-1.5,0.8-3.1,1.3-4.7,1.3c-2.5,0-4.6-0.9-6.3-2.6c-1.7-1.7-2.6-3.9-2.6-6.3c0-2.2,0.7-4.2,2.2-5.9c1.8-2.1,4.1-3.2,7-3.2
+                           C40.6,3,42.1,3.4,43.6,4.3z"/>
+      <path class="st4" d="M46.7,9.7h2.5v1c0.5-0.5,0.9-0.8,1.2-1c0.4-0.2,0.8-0.3,1.3-0.3c0.7,0,1.4,0.2,2.1,0.7l-1.2,2.3
+                           c-0.5-0.3-0.9-0.5-1.4-0.5c-1.4,0-2.1,1-2.1,3.1v5.7h-2.5V9.7z"/>
+      <path class="st4" d="M65.5,15.8h-7.8c0.1,0.9,0.4,1.6,0.9,2.1c0.5,0.5,1.2,0.8,2,0.8c0.6,0,1.1-0.1,1.6-0.4
+                           c0.4-0.3,0.9-0.9,1.4-1.7l2.1,1.2c-0.3,0.6-0.7,1-1,1.4c-0.4,0.4-0.8,0.7-1.2,1c-0.4,0.3-0.9,0.4-1.4,0.6c-0.5,0.1-1,0.2-1.6,0.2
+                           c-1.6,0-2.9-0.5-3.9-1.6c-1-1.1-1.5-2.5-1.5-4.2c0-1.7,0.5-3.1,1.4-4.2c1-1.1,2.2-1.6,3.8-1.6c1.6,0,2.9,0.5,3.8,1.5
+                           c0.9,1,1.4,2.4,1.4,4.2L65.5,15.8z M62.9,13.7c-0.4-1.3-1.2-2-2.6-2c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4
+                           s-0.4,0.4-0.6,0.6c-0.2,0.2-0.3,0.5-0.4,0.8H62.9z"/>
+      <path class="st4" d="M76.6,9.7h2.5v10.9h-2.5v-1.1c-1,1-2.2,1.5-3.4,1.5c-1.5,0-2.8-0.5-3.8-1.6c-1-1.1-1.5-2.5-1.5-4.2
+                           c0-1.6,0.5-3,1.5-4.1c1-1.1,2.2-1.6,3.7-1.6c1.3,0,2.4,0.5,3.4,1.6V9.7z M70.6,15.2c0,1,0.3,1.9,0.8,2.6c0.6,0.7,1.3,1,2.2,1
+                           c0.9,0,1.7-0.3,2.3-1c0.6-0.7,0.9-1.5,0.9-2.5c0-1-0.3-1.9-0.9-2.5c-0.6-0.7-1.3-1-2.2-1c-0.9,0-1.6,0.3-2.2,1
+                           C70.9,13.4,70.6,14.2,70.6,15.2z"/>
+      <path class="st4" d="M86.1,12.1v8.6h-1.3h-1.2v-8.6h-1.1V9.7h1.1v-4h2.5v4h2v2.4H86.1z"/>
+      <path class="st4" d="M90.4,15.1c0-1.6,0.6-2.9,1.7-4c1.1-1.1,2.5-1.7,4.1-1.7c1.6,0,3,0.6,4.2,1.7c1.1,1.1,1.7,2.5,1.7,4.1
+                           c0,1.6-0.6,3-1.7,4.1c-1.1,1.1-2.5,1.7-4.2,1.7c-1.6,0-3-0.6-4.1-1.7C90.9,18.2,90.4,16.8,90.4,15.1z M93,15.2c0,1.1,0.3,2,0.9,2.6
+                           c0.6,0.6,1.4,1,2.4,1c1,0,1.8-0.3,2.4-1c0.6-0.6,0.9-1.5,0.9-2.6c0-1.1-0.3-1.9-0.9-2.6c-0.6-0.6-1.4-1-2.4-1c-1,0-1.7,0.3-2.3,1
+                           C93.3,13.3,93,14.2,93,15.2z"/>
+      <path class="st4" d="M105,9.7h2.5v1c0.5-0.5,0.9-0.8,1.2-1c0.4-0.2,0.8-0.3,1.3-0.3c0.7,0,1.4,0.2,2.1,0.7l-1.2,2.3
+                           c-0.5-0.3-0.9-0.5-1.4-0.5c-1.4,0-2.1,1-2.1,3.1v5.7H105V9.7z"/>
+      <path class="st4" d="M132.6,21h-3.3l-1.4-1.4c-1.4,0.9-3.1,1.4-4.8,1.4c-2.3,0-4.3-0.8-6.1-2.3c-1.9-1.7-2.9-3.9-2.9-6.6
+                           c0-2.6,0.9-4.8,2.8-6.5c1.8-1.7,3.9-2.5,6.3-2.5c2.2,0,4.2,0.7,5.9,2.2c2.1,1.8,3.1,4.1,3.1,7c0,2.2-0.8,4.2-2.5,6L132.6,21z
+                           M125.4,13.8l2.5,2.5c1.1-1.2,1.7-2.6,1.7-4.3c0-1.9-0.6-3.4-1.9-4.7c-1.2-1.3-2.8-1.9-4.6-1.9c-1.9,0-3.4,0.6-4.6,1.9
+                           c-1.2,1.3-1.8,2.8-1.8,4.8c0,1.9,0.6,3.4,1.9,4.6c1.3,1.2,2.8,1.8,4.4,1.8c1.1,0,2.2-0.3,3.1-0.8l-4.1-4H125.4z"/>
+      <path class="st4" d="M137.8,9.7V16c0,1.8,0.7,2.7,2.1,2.7c1.4,0,2.1-0.9,2.1-2.7V9.7h2.5v6.3c0,0.9-0.1,1.6-0.3,2.3
+                           c-0.2,0.6-0.6,1.1-1.1,1.5c-0.9,0.7-1.9,1.1-3.3,1.1c-1.3,0-2.4-0.4-3.2-1.1c-0.5-0.5-0.9-1-1.1-1.5c-0.2-0.5-0.3-1.3-0.3-2.3V9.7
+                           H137.8z"/>
+      <path class="st4" d="M158.1,15.8h-7.8c0.1,0.9,0.4,1.6,0.9,2.1c0.5,0.5,1.2,0.8,2,0.8c0.6,0,1.1-0.1,1.6-0.4
+                           c0.4-0.3,0.9-0.9,1.4-1.7l2.1,1.2c-0.3,0.6-0.7,1-1,1.4c-0.4,0.4-0.8,0.7-1.2,1c-0.4,0.3-0.9,0.4-1.4,0.6c-0.5,0.1-1,0.2-1.6,0.2
+                           c-1.6,0-2.9-0.5-3.9-1.6c-1-1.1-1.5-2.5-1.5-4.2c0-1.7,0.5-3.1,1.4-4.2c1-1.1,2.2-1.6,3.8-1.6c1.6,0,2.9,0.5,3.8,1.5
+                           c0.9,1,1.4,2.4,1.4,4.2L158.1,15.8z M155.5,13.7c-0.4-1.3-1.2-2-2.6-2c-0.3,0-0.6,0-0.9,0.1c-0.3,0.1-0.5,0.2-0.7,0.4
+                           c-0.2,0.2-0.4,0.4-0.6,0.6s-0.3,0.5-0.4,0.8H155.5z"/>
+      <path class="st4" d="M167.5,11.6l-2.1,1.1c-0.3-0.7-0.7-1-1.2-1c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0.2-0.2,0.4-0.2,0.6
+                           c0,0.4,0.5,0.8,1.5,1.2c1.3,0.6,2.2,1.1,2.7,1.6c0.5,0.5,0.7,1.1,0.7,2c0,1.1-0.4,1.9-1.2,2.7c-0.8,0.7-1.7,1-2.7,1
+                           c-1.8,0-3.1-0.9-3.9-2.7l2.2-1c0.3,0.5,0.5,0.9,0.7,1c0.3,0.3,0.7,0.4,1.1,0.4c0.9,0,1.3-0.4,1.3-1.2c0-0.4-0.3-0.9-1-1.3
+                           c-0.3-0.1-0.5-0.3-0.8-0.4c-0.3-0.1-0.5-0.2-0.8-0.4c-0.7-0.4-1.3-0.7-1.6-1.1c-0.4-0.5-0.6-1-0.6-1.8c0-1,0.3-1.7,1-2.4
+                           c0.7-0.6,1.5-0.9,2.4-0.9C165.8,9.4,166.8,10.2,167.5,11.6z"/>
+      <path class="st4" d="M174.2,12.1v8.6h-2.5v-8.6h-1.1V9.7h1.1v-4h2.5v4h2v2.4H174.2z"/>
+    </g>
+    <g>
+      <path class="st4" d="M13,19.1l-0.2,0.2c-0.4,0.4-1.2,0.4-1.6,0l-6.5-6.5c-0.4-0.4-0.4-1.2,0-1.6l6.5-6.5c0.4-0.4,1.2-0.4,1.6,0
+                           l0.1,0.1l2.4-2.4l-1.7-1.7c-0.9-0.9-2.3-0.9-3.2,0l-9.7,9.7c-0.9,0.9-0.9,2.3,0,3.2l9.7,9.7c0.9,0.9,2.3,0.9,3.2,0l1.8-1.8L13,19.1
+                           z"/>
+      <path class="st4" d="M19.4,17.6l3.9-3.9c0.9-0.9,0.9-2.3,0-3.2L16.9,4l-2.4,2.4l4.8,4.8c0.4,0.4,0.4,1.2,0,1.6L17,15.1l-2.4,2.4
+                           l0,0l6.1,6.1c0.4,0.4,1.2,0.4,1.6,0l0.8-0.8c0.4-0.4,0.4-1.2,0-1.6L19.4,17.6z"/>
+    </g>
+  </symbol>
+</svg>
+<div id="fb-root"></div>
+<header class="l-header" role="banner">
+<div class="l-wrapper">
+  <div class="l-header-title-wrap">
+        <h1 class="l-header-title">
+      <a href="https://creatorquest.jp" class="l-header-logo" title="CreatorQuest" rel='home'>
+        <svg class="logo-primary">
+            <title>CreatorQuest</title>
+            <use xlink:href="#logo-white"/>
+            <foreignObject display="none">
+                <img src="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/logo-white.png" width="146" height="20" alt="CreatorQuest">
+            </foreignObject>
+        </svg>
+      </a>
+  </h1>
+  </div>
+  <!-- /.l-header-title-wrap -->
+  <div class="l-header-nav-wrap">
+    <button type="button" class="js-button-hamburger button-hamburger">
+            <span class="hamburger">
+               <span class="screen-reader-text">Menu</span>
+            </span>
+          </button>
+    <nav class="l-global-nav js-drower drower" role="navigation">
+      <div class="l-global-nav-inner drower-inner">
+        
+        <h2 class="drower-title screen-reader-text">メインメニュー</h2>
+        <ul>
+          <li><a href="https://creatorquest.jp/lessons/" title="レッスン" class="is-active">レッスン</a></li>
+          <li><a href="https://creatorquest.jp/course/" title="コース">コース</a></li>
+          <li><a href="https://creatorquest.jp/reference/" title="リファレンス">リファレンス</a></li>
+          <li class="in-child"><a href="https://creatorquest.jp/mypage/" title="マイページ">yosino yuuka</a>
+            <ul class="child">
+              <li><a href="https://creatorquest.jp/mypage/" title="マイページ">マイページ</a></li>
+              <li><a href="https://creatorquest.jp/mypage/profile/" title="個人設定">個人設定</a></li>
+              <li><a href="https://creatorquest.jp/logout/?_wpnonce=aceb3f6f40" title="ログアウト">ログアウト</a></li>
+            </ul>
+          </li>
+          <li class="search-item icon-item">
+            <a class="js-search search-link">
+              <i class="material-icons icon-search">search</i><span class="screen-reader-text">検索フィールドを表示</span>
+              <i class="material-icons icon-clear">clear</i><span class="screen-reader-text">検索フィールドを閉じる</span>
+            </a>
+            <div class="search-form-wrap">
+
+                    <form role="search" method="get" action="https://creatorquest.jp/" class="site-search">
+                        <fieldset class="js-textfield textfield search-field">
+                            <label class="textfield-label" for="s">キーワードを入力</label>
+                          <input name="s" id="s" type="search" value="" class="textfield-input" placeholder="キーワードを入力">
+                            <button class="button-go-search"><span class="screen-reader-text">creatorquest.jp内を探す</span><i class="material-icons">search</i></button>
+                        </fieldset>
+                    </form>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- /.l-wrapper -->
+</header>
+
+  <div class="local-nav-wrap">
+    <nav class="local-nav js-scroll-fixed">
+      <div class="local-nav-title-wrap">
+          <div class="l-wrapper local-nav-inner">
+                        <h2 class="local-nav-title">
+                <a href="https://creatorquest.jp/lessons/html/" class="local-nav-title-link">
+                    HTML 入門                </a>
+            </h2>
+                        <button type="button" class="js-button-slidenav button-arrow-updown">
+              <span class="arrow-updown">
+                 <span class="screen-reader-text">レッスン一覧</span>
+              </span>
+            </button>
+            <div class="local-nav-button-wrap">
+                                        <p class="local-nav-button"><a href="https://creatorquest.jp/data/html-lesson.zip" class="button-cyan button-min">教材<i class="material-icons">file_download</i></a></p>
+                                      </div>
+          </div>
+      </div><!-- /.local-nav-title-wrap -->
+      <ol class="local-nav-list js-slidenav">
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/html-intro/" class="is-complate">
+                <span class="caption">Chapter01</span>
+                HTMLの基本を学ぼう！<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">受講済</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/html-attribute/" class="is-complate">
+                <span class="caption">Chapter02</span>
+                HTMLの属性について<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">受講済</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/version-and-doctype/" class="is-complate">
+                <span class="caption">Chapter03</span>
+                HTMLのバージョンとDOCTYPE宣言<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">受講済</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/meta-character/" class="is-complate">
+                <span class="caption">Chapter04</span>
+                文字コードと文字化け対策<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">受講済</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/category-and-rule/" class="is-active">
+                <span class="caption">Chapter05</span>
+                要素の配置ルールとカテゴリー<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/p-and-hn/" class="">
+                <span class="caption">Chapter06</span>
+                段落と見出しの要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/character-reference-and-br/" class="">
+                <span class="caption">Chapter07</span>
+                特殊な記述が必要な文字と改行<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/em-and-strong/" class="">
+                <span class="caption">Chapter08</span>
+                強調と重要の要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/li-ul-ol/" class="">
+                <span class="caption">Chapter09</span>
+                箇条書きに関連する要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/dl-dt-dd/" class="">
+                <span class="caption">Chapter10</span>
+                用語説明型リストの要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/traning1/" class="">
+                <span class="caption">Chapter11</span>
+                【練習問題1】ボブのお願い<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/anchor/" class="">
+                <span class="caption">Chapter12</span>
+                リンクを設定しよう<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/absolutepath-relativepath/" class="">
+                <span class="caption">Chapter13</span>
+                絶対パスと相対パス<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/img/" class="">
+                <span class="caption">Chapter14</span>
+                画像を表示してみよう<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/table/" class="">
+                <span class="caption">Chapter15</span>
+                表（テーブル）を表す要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/form/" class="">
+                <span class="caption">Chapter16</span>
+                フォーム関連の要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/label/" class="">
+                <span class="caption">Chapter17</span>
+                ラベルと部品を関連付けよう<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/traning2/" class="">
+                <span class="caption">Chapter18</span>
+                【練習問題2】ムカミのお願い<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/sectioning/" class="">
+                <span class="caption">Chapter19</span>
+                セクションを明確にしよう<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/structure/" class="">
+                <span class="caption">Chapter20</span>
+                ページの基本構造を示そう<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/copyright/" class="">
+                <span class="caption">Chapter21</span>
+                著作権情報を表す要素<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/total/" class="">
+                <span class="caption">Chapter22</span>
+                ページをまるごと作ってみよう！<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+                            <li>
+              <a href="https://creatorquest.jp/lessons/html/last-boss/" class="">
+                <span class="caption">Chapter23</span>
+                最終課題「メアリーのお願い」<i class="material-icons local-nav-sign">&#xE876;</i><span class="screen-reader-text js-complate-label">未受講</span>
+              </a>
+            </li>
+              </ol>
+    </nav><!-- /.local-nav -->
+
+  </div><!-- /.local-nav-wrap -->
+<div class="hero hero-detail">
+    <div class="l-wrapper">
+      <div class="hero-body">
+          <h1 class="hero-title hero-title-normal hero-title-detail">
+            <span class="hero-title-step">Chapter05</span><br>
+            要素の配置ルールとカテゴリー
+          </h1>
+          <p class="hero-description">
+              要素の配置ルールであるコンテンツ・モデルを理解しましょう。          </p>
+      </div>
+            <div class="hero-thumbnail js-movie-parent movie-parent">
+
+        <div class="movie-wrap js-movie-wrap js-fixed-movie" data-movie="882MNuqNEpE">
+              <div class="movie-frame-wrap">
+                  <div class="movie-frame">
+                      <div id="player"></div>
+                  </div>
+              </div>
+              <button type="button" class="js-button-movie-control button-toggle movie-controlar">
+                  <span class="toggle-swich">
+                      <span class="screen-reader-text">表示切り替え</span>
+                  </span>
+              </button>
+          </div>
+      </div>
+          </div>
+  </div><!-- /.hero -->
+<aside class="ads-wrap ads-in-post">
+  <div class="l-wrapper">
+    <div class="ads big-banner">
+      <h2 class="ads-title screen-reader-text">スポンサーリンク</h2>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- cq-contentTop -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2709478295930981"
+     data-ad-slot="4737500250"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>    </div>
+  </div>
+</aside>  <main class="l-main" role="main">
+  <div class="l-section-secondary l-section-detail">
+    <div class="l-wrapper-detail">
+      <div class="js-fixed-sidebar fixed-sidebar">
+        <div class="js-fixed-sidebar-inner fixed-sidebar-inner">
+          <nav class="js-slidepanel table-of-content is-chapter">
+            <h2 class="js-button-slidepanel table-of-content-title icon-plus">目次</h2>
+            <ol class="table-of-content-list is-hidden-sp">
+                            <li><a href="#sec1">今回の概要と目標</a></li>
+            <li><a href="#rule">要素の配置ルール</a></li>
+            <li><a href="#categories">要素のカテゴリー</a></li>
+            <li><a href="#traning">練習問題</a></li>
+            <li><a href="#matome">まとめ</a></li>            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="js-fixed-main fixed-main">
+          <div class="panel">
+              <article class="panel-article">
+                <div class="entry-body panel-inner">
+                    <h2 id="sec1">今回の概要と目標 <small class="js-button-seek seek">0:22</small></h2>
+<p>
+  次回以降は、いよいよ<a href="https://creatorquest.jp/reference/html/element/body/" title="body要素"><code>&lt;body&gt;</code></a>要素内で使う要素を紹介していくのですが、その前に要素の配置ルールについて理解しておいたほうがいいでしょう。従って、HTML入門講座5回目は、要素の配置ルールとカテゴリーについて学習しましょう。具体的には、「<mark>〇〇要素の中には、△△要素は配置できるけど、□□要素は配置できない</mark>」という要素の配置に関するルールです。最終的には、下記のように、<a href="https://creatorquest.jp/reference/html/element/h1/" title="h1要素"><code>&lt;h1&gt;</code></a>要素の中に<a href="https://creatorquest.jp/reference/html/element/p/" title="p要素"><code>&lt;p&gt;</code></a>要素を配置することが可能かどうかを判断できるようになりましょう。
+</p>
+<figure>
+  <figcaption>&lt;h1&gt;要素の中に&lt;p&gt;要素要素を配置した例</figcaption>
+  <pre><code class="language-html">&lt;h1&gt;&lt;p&gt;俺は、伝説のWebクリエーターになる男だ！&lt;/p&gt;&lt;/h1&gt;</code></pre>
+</figure>
+
+
+<h2 id="rule">要素の配置ルール <small class="js-button-seek seek">1:44</small></h2>
+<p><img loading="lazy" src="https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models.png" alt="要素の配置ルール" width="1536" height="720" class="alignnone size-full wp-image-219" srcset="https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models.png 1536w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-300x141.png 300w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-768x360.png 768w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-1024x480.png 1024w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-730x342.png 730w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-1460x684.png 1460w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-640x300.png 640w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-content-models-1280x600.png 1280w" sizes="(max-width: 1536px) 100vw, 1536px" /></p>
+<p><strong>HTMLの各要素には配置ルールがあります。</strong><br class="break-pc">HTMLを書いていると、上記のように「〇〇要素の中には、△△要素は配置できるのか？」という事を常に意識しながら記述する必要があります。HTML5からは、自分自身の要素の中に配置できる要素のことを「<mark>コンテンツ・モデル</mark>」と呼んでいます。このコンテンツ・モデルの多くは、HTMLの各要素を分類するカテゴリー名で指定されています。従って、「〇〇要素のコンテンツ・モデルは、△△カテゴリーなので、△△カテゴリーに属する要素なら、〇〇要素の中に配置できる」というようになります。</p>
+
+<h2 id="categories">要素のカテゴリー <small class="js-button-seek seek">2:53</small></h2>
+<p><img loading="lazy" src="https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories.png" alt="要素のカテゴリー" width="1536" height="720" class="alignnone size-full wp-image-220" srcset="https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories.png 1536w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-300x141.png 300w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-768x360.png 768w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-1024x480.png 1024w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-730x342.png 730w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-1460x684.png 1460w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-640x300.png 640w, https://creatorquest.jp/wp/wp-content/uploads/2016/11/img-html-categories-1280x600.png 1280w" sizes="(max-width: 1536px) 100vw, 1536px" /></p>
+
+<p>
+  HTMLには、要素を分類するカテゴリーという概念があります。<br class="break-pc"><mark>HTML5より前</mark>は<a href="https://creatorquest.jp/reference/html/block-inline/" title="ブロックレベル要素とインライン要素">２つのカテゴリー</a>で要素を分類していましたが、<mark>HTML5から</mark>は、<a href="https://creatorquest.jp/reference/html/categories/">主要なカテゴリー</a>だけでも7つあります。なお、多くの要素は1つのカテゴリーにのみ属しているわけではなく、複数のカテゴリーに属していたりします。また、どのカテゴリーにも属さない要素もあります。以下が7つの主要カテゴリーですが、今はまだどの要素がどのカテゴリーに属するかは覚えなくて大丈夫です。
+</p>
+<dl id="metadata-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#metadata-content">メタデータ・コンテンツ</a></dt>
+  <dd>
+    ページの情報を指定する要素などが分類されている。基本的には画面に表示されない要素。
+  </dd>
+</dl>
+<dl id="flow-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#flow-content">フロー・コンテンツ</a></dt>
+  <dd>
+    body要素の中なら基本的にどこにでも配置できる要素分類されている。ほとんどの要素はこのフロー・コンテンツになる。
+  </dd>
+</dl>
+<dl id="sectioning-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#sectioning-content">セクショニング・コンテンツ</a></dt>
+  <dd>
+    章・節・項のようにアウトライン<small>（階層構造）</small>を形成する要素が分類されている。
+  </dd>
+</dl>
+<dl id="heading-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#heading-content">ヘディング・コンテンツ</a></dt>
+  <dd>
+    見出しを示す要素。
+  </dd>
+</dl>
+<dl id="phrasing-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a></dt>
+  <dd>
+    主にテキストの一部に意味や役割を与える要素が分類されている。
+  </dd>
+</dl>
+<dl id="embedded-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#embedded-content">エンベッディッド・コンテンツ</a></dt>
+  <dd>
+    外部のファイルや、HTML以外の言語で生成されたコンテンツを埋め込む要素が分類されている。
+  </dd>
+</dl>
+<dl id="interactive-content">
+  <dt><a href="https://creatorquest.jp/reference/html/categories/#interactive-content">インタラクティブ・コンテンツ</a></dt>
+  <dd>
+    ユーザーが何かしらの操作<small>（クリックなど）</small>をすることができる要素が分類されている。
+  </dd>
+</dl>
+<p>
+  今はまだ、これらのカテゴリーを覚えなくて結構ですし、どの要素がどのカテゴリーに属しているかも覚えなくて大丈夫です。<strong>次回以降、要素を紹介するタイミングで、その要素がどのカテゴリーに属しているかお伝えします。</strong>また、カテゴリーの詳細情報を<a href="https://creatorquest.jp/reference/">リファレンス</a>にも用意していますので、そちらも活用してみて下さい。
+</p>
+<p>
+  <i class="material-icons">&#xE5CC;</i><a href="https://creatorquest.jp/reference/html/categories/">要素のカテゴリー &#8211; HTMLリファレンス</a>
+</p>
+<h3 id="categories-content-models">カテゴリーが指定されたコンテンツ・モデルの例</h3>
+<p>
+  それでは、カテゴリーが指定されたコンテンツ・モデルの例を見てみましょう。<br class="break-pc">例えば、段落を表す<a href="https://creatorquest.jp/reference/html/element/p/"><code>&lt;p&gt;</code></a>要素のコンテンツ・モデルは「<a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a>」になります。つまり、<strong><code>&lt;p&gt;</code>要素の中に入れるのは、フレージング・コンテンツというカテゴリーに属した要素のみ</strong>ということです。下記は正しい配置を行っている例です。
+</p>
+<figure>
+  <figcaption>正：&lt;p&gt;要素の中にフレージング・コンテンツの要素を配置した例</figcaption>
+  <pre><code class="language-html">&lt;p&gt;伝説のWebクリエーターに、&lt;em&gt;おれ&lt;/em&gt;はなる&lt;/p&gt;</code></pre>
+</figure>
+<p>上記の例で使用している<a href="https://creatorquest.jp/reference/html/element/em/"><code>&lt;em&gt;</code></a>要素は強調を表す<a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a>の要素です。<small>（「<a href="https://creatorquest.jp/lessons/html/em-and-strong/">Chapter08</a>」で紹介します）</small>従って、<a href="https://creatorquest.jp/reference/html/element/p/"><code>&lt;p&gt;</code></a>要素の中に配置することができます。</p>
+
+<figure>
+  <figcaption>誤：&lt;p&gt;要素の中にフレージング・コンテンツ以外の要素を配置した例</figcaption>
+  <pre><code class="language-html">&lt;p&gt;
+  &lt;p&gt;伝説のWebクリエーターになって&lt;/p&gt;
+&lt;/p&gt;</code></pre>
+</figure>
+<p>上記は、<a href="https://creatorquest.jp/reference/html/element/p/"><code>&lt;p&gt;</code></a>要素の中に、<a href="https://creatorquest.jp/reference/html/element/p/"><code>&lt;p&gt;</code></a>要素を配置しています。<a href="https://creatorquest.jp/reference/html/element/p/"><code>&lt;p&gt;</code></a>要素のカテゴリーは、<a href="https://creatorquest.jp/reference/html/categories/#flow-content">フロー・コンテンツ</a>です。従って、フレージング・コンテンツには属していないので、上記の例は誤った配置になります。間違って配置してしまっても、<mark>エラーが出るわけではありません</mark>が、文法的によろしくないので、開発者本人が自分で気をつけて配置する必要があります。</p>
+
+<p>
+  このようにHTMLでは中に配置できる要素が決まっているので、<strong>コンテンツ・モデルを確認してから配置</strong>するようにしましょう。なお、コンテンツ・モデルは、カテゴリー以外にも、<mark>特定の要素のみ配置できる</mark>パターンや、<mark>親要素<small>（自分を挟んでいる要素）</small>と一緒</mark>というパターンなどもあります。必要に応じて、HTMLリファレンスの<a href="https://creatorquest.jp/reference/html/content-models/">コンテンツ・モデル</a>をご覧下さい。
+</p>
+<p>
+  <i class="material-icons">&#xE5CC;</i><a href="https://creatorquest.jp/reference/html/content-models/">コンテンツ・モデル | HTMLリファレンス</a>
+</p>
+<!-- <h2 id="before-html5">HTML5より前の配置ルール</h2>
+<p>
+  HTML5より前のHTMLでは、以下の2つのカテゴリーと、その他の要素（前回までに学習したHTMLの基本構造の要素など）に分類されていました。もちろんこのタイミングで、どの要素がどのカテゴリーに属しているかまでは覚えなくて大丈夫です。
+</p>
+<dl id="block-elements">
+  <dt><a href="https://creatorquest.jp/reference/html/block-inline/#block-level-elements">ブロックレベル要素</a></dt>
+  <dd>
+    見出し・段落・表など、文書を構成する基本となる要素で、一つのかたまり(ブロック)に意味や役割を与える要素が分類される。一般的なブラウザでは要素の前後が改行される。
+  </dd>
+</dl>
+<dl id="inline-elements">
+  <dt><a href="https://creatorquest.jp/reference/html/block-inline/#inline-elements">インライン要素</a></dt>
+  <dd>
+    主にブロックレベル要素の内容の一部となる要素で、特定の単語や、文章に意味や役割を与える要素や、画像などが分類される。なお、文章自体もインライン要素に分類される。
+  </dd>
+</dl>
+
+<p>HTML5より前は、主に以下の配置ルールで要素を配置していました。</p>
+<ul>
+  <li>ブロックレベル要素の中には、ブロックレベル要素もインライン要素も配置できる</li>
+  <li>インライン要素の中には、インライン要素は配置できるが、<strong>ブロックレベル要素を配置することは出来ない</strong></li>
+</ul>
+<p>
+  例えば、<a href="https://creatorquest.jp/reference/html/element/p/"><code>&lt;p&gt;</code></a>要素と、<a href="https://creatorquest.jp/reference/html/element/em/"><code>&lt;em&gt;</code></a>要素を使う場合で見てみましょう。<code>&lt;p&gt;</code>要素は<a href="https://creatorquest.jp/reference/html/block-inline/#block-level-elements">ブロックレベル要素</a>で、<code>&lt;em&gt;</code>要素は<a href="https://creatorquest.jp/reference/html/block-inline/#inline-elements">インライン要素</a>に分類されます。従って<code>&lt;p&gt;</code>要素の中に<code>&lt;em&gt;</code>を配置することはできますが、<code>&lt;em&gt;</code>の中に<code>&lt;p&gt;</code>要素を配置することはできません。
+</p>
+<figure>
+  <figcaption>正：ブロックレベル要素の中にインラインレベル要素を配置した例</figcaption>
+  <pre><code class="language-html">&lt;p&gt;伝説のWebクリエーターに、&lt;em&gt;おれ&lt;/em&gt;はなる&lt;/p&gt;</code></pre>
+</figure>
+<figure>
+  <figcaption>誤：インラインレベル要素の中にブロックレベル要素を配置した例</figcaption>
+  <pre><code class="language-html">&lt;em&gt;&lt;p&gt;伝説のWebクリエーターに、おれはなる&lt;/p&gt;&lt;/em&gt;</code></pre>
+</figure>
+<p>
+  このようなルールがHTML5より前の配置ルールになります。ただし、<strong>すべての要素が上記のルール通りというわけではありません。</strong>例えば、<code>&lt;p&gt;</code>は<a href="https://creatorquest.jp/reference/html/block-inline/#block-level-elements">ブロックレベル要素</a>ですが、<mark>中に配置できる要素は<a href="https://creatorquest.jp/reference/html/block-inline/#inline-elements">インライン要素</a>のみ</mark>というルールになっています。このようなパターンもあるということを知っておいて下さい。次回以降、要素を紹介するタイミングで、その要素がどちらのカテゴリに属しているかお伝えします。
+</p>
+<p>
+  これらはHTML5より前のカテゴリーですが、この「<a href="https://creatorquest.jp/reference/html/block-inline/#block-level-elements">ブロックレベル要素</a>」、「<a href="https://creatorquest.jp/reference/html/block-inline/#inline-elements">インライン要素</a>」という分類は比較的わかりやすいですし、今でも<abbr title="Cascading Style Sheets">CSS</abbr>（Webサイトのデザインを行なう言語）などで使われている考え方なので、知っておくといいと思います。
+</p>
+<p>
+  <i class="material-icons">&#xE5CC;</i><a href="https://creatorquest.jp/reference/html/block-inline/">ブロックレベル要素とインライン要素 - HTML リファレンス</a>
+</p> -->
+<h2 id="traning">練習問題 <small class="js-button-seek seek">7:55</small></h2>
+<p>
+  HTML5の配置ルールの理解度を確認してみましょう。なお、解けた問題は問題文の横のチェックボックスをオンにしましょう。
+</p>
+<!-- <from> -->
+<div id="question">
+  <ol>
+    <li>
+      <label class="checkbox-secondary js-control">
+        <span class="checkbox-label">HTML5において下記のHTMLの配置ルールは正しいかどうかをお考えください。</span>
+      </label>
+      <figure>
+        <pre><code class="language-html">&lt;h1&gt;&lt;p&gt;俺は、伝説のWebクリエーターになる男だ！&lt;/p&gt;&lt;/h1&gt;</code></pre>
+      </figure>
+      <ul>
+        <li>h1要素のコンテンツ・モデル： <a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a></li>
+        <li>p要素のカテゴリ： <a href="https://creatorquest.jp/reference/html/categories/#flow-content">フロー・コンテンツ</a></li>
+      </ul>
+
+    </li>
+    <li>
+      <label class="checkbox-secondary js-control">
+        <span class="checkbox-label">HTML5において下記のHTMLの配置ルールは正しいかどうかをお考えください。</span>
+      </label>
+      <figure>
+        <pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;伝説のWebクリエータになる理由&lt;/title&gt;
+  &lt;p&gt;どんな難題でもWebを使って解決できるようになるため&lt;/p&gt;
+&lt;/head&gt;</code></pre>
+      </figure>
+      <ul>
+        <li>head要素のコンテンツ・モデル： <a href="https://creatorquest.jp/reference/html/categories/#metadata-content">メターデータ・コンテンツ</a></li>
+        <li>title要素のカテゴリ： <a href="https://creatorquest.jp/reference/html/categories/#metadata-content">メタデータ・コンテンツ</a></li>
+        <li>p要素のカテゴリ： <a href="https://creatorquest.jp/reference/html/categories/#flow-content">フロー・コンテンツ</a></li>
+      </ul>
+    </li>
+    <li>
+      <label class="checkbox-secondary js-control">
+        <span class="checkbox-label">HTML5において下記のHTMLの配置ルールは正しいかどうかをお考えください。</span>
+      </label>
+      <figure>
+        <pre><code class="language-html">&lt;div&gt;
+  &lt;p&gt;
+    &lt;em&gt;ひとりで&lt;/em&gt;Webの勉強をしていると、時々心が折れそうになる。<br>
+    どうやら僕には、&lt;strong&gt;チベーションを上げてくれる仲間が必要&lt;/strong&gt;だ。
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+      </figure>
+      <ul>
+        <li>div要素のコンテンツ・モデル： <a href="https://creatorquest.jp/reference/html/categories/#flow-content">フロー・コンテンツ</a></li>
+        <li>p要素のコンテンツ・モデル： <a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a></li>
+        <li>p要素のカテゴリ： <a href="https://creatorquest.jp/reference/html/categories/#flow-content">フロー・コンテンツ</a></li>
+        <li>em要素のカテゴリ： <a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a></li>
+        <li>strong要素のカテゴリ： <a href="https://creatorquest.jp/reference/html/categories/#phrasing-content">フレージング・コンテンツ</a></li>
+      </ul>
+    </li>
+  </ol>
+</div>
+
+<!-- <label for="ok" class="radio js-control">
+    <input type="radio" name="quiz" id="ok" value="ok" class="radio-button">
+    <span class="radio-label">正しい</span>
+  </label>
+  <label for="ng" class="radio js-control">
+    <input type="radio" name="quiz" id="ng" value="ng" class="radio-button">
+    <span class="radio-label">誤り</span>
+  </label> -->
+
+
+<!-- <label for="ok" class="radio js-control">
+    <input type="radio" name="quiz" id="ok" value="ok" class="radio-button">
+    <span class="radio-label">正しい</span>
+  </label>
+  <label for="ng" class="radio js-control">
+    <input type="radio" name="quiz" id="ng" value="ng" class="radio-button">
+    <span class="radio-label">誤り</span>
+  </label> -->
+
+
+<!-- <label for="ok" class="radio js-control">
+    <input type="radio" name="quiz" id="ok" value="ok" class="radio-button">
+    <span class="radio-label">正しい</span>
+  </label>
+  <label for="ng" class="radio js-control">
+    <input type="radio" name="quiz" id="ng" value="ng" class="radio-button">
+    <span class="radio-label">誤り</span>
+  </label>
+</from> -->
+<div id="answer">
+  <dl class="js-slidepanel">
+    <dt class="js-button-slidepanel icon-slidepanel">解答</dt>
+    <dd class="is-hidden">
+      <p>解答 ： <small class="js-button-seek seek">8:51</small></p>
+      <ul>
+        <li>問1：<em>誤り</em><small>（p要素はフロー・コンテンツ。フレージング・コンテンツではない）</small></li>
+        <li>問2：<em>誤り</em><small>（p要素はフロー・コンテンツ。メタデータ・コンテンツではない）</small></li>
+        <li>問3：<em>正しい</em></li>
+      </ul>
+    </dd>
+  </dl>
+</div>
+
+<h2 id="matome">まとめ <small class="js-button-seek seek">14:43</small></h2>
+<p>コンテンツ・モデルと要素のカテゴリーは何かわかりましたか？</p>
+<ul class="list-large">
+  <li>中に配置できる要素のことを<mark>コンテンツ・モデル</mark>という</li>
+  <li>コンテンツモデルの多くは<mark>カテゴリー名</mark>で指定されている</li>
+</ul>
+                    <div class="entry-buttons">
+                        <label class="js-checklabel checkbox-label">
+                            <input type="checkbox" name="complate" id="comp" class="js-checkinput checkbox-input" value="comp">
+                            <span class="checkbox-text">受講済にする</span>
+                        </label>
+                    </div>
+                </div><!-- /.entry-body -->
+
+              </article>
+              <aside class="entry-sns-wrap">
+                  <h2 class="screen-reader-text">シェアする</h2>
+                  <ul class="entry-sns-list">
+                      <!--ツイートボタン-->
+<li class="twitter">
+    <a href="http://twitter.com/intent/tweet?url=https://creatorquest.jp/lessons/html/category-and-rule/&text=要素の配置ルールとカテゴリー&via=Creator_Quest&tw_p=tweetbutton" class="button button-twitter" target="_blank"><span class="share-count">0</span><span class="sns-title">Twitter</span></a>
+</li>
+
+<!--Facebookボタン-->
+<li class="facebook">
+    <a href="http://www.facebook.com/sharer.php?src=bm&u=https://creatorquest.jp/lessons/html/category-and-rule/&t=要素の配置ルールとカテゴリー" class="button button-facebook" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank"><span class="share-count">0</span><span class="sns-title">Facebook</span></a>
+</li>
+
+<!--Google+1ボタン-->
+<li class="googleplus">
+    <a href="https://plus.google.com/share?url=https://creatorquest.jp/lessons/html/category-and-rule/" class="button button-googleplus" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=500');return false;" target="_blank"><span class="share-count">0</span><span class="sns-title">Google+</span></a>
+</li>
+
+<!--はてブボタン-->
+<li class="hatebu">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https://creatorquest.jp/lessons/html/category-and-rule/" class="button button-hatebu" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=510');return false;" target="_blank"><span class="share-count">0</span><span class="sns-title">はてブ</span></a>
+</li>
+
+<!--ポケットボタン-->
+<li class="pocket">
+    <a href="http://getpocket.com/edit?url=https://creatorquest.jp/lessons/html/category-and-rule/&title=要素の配置ルールとカテゴリー" class="button button-poket" target="_blank"><span class="share-count">9</span><span class="sns-title">Pocket</span></a>
+</li>
+                  </ul>
+              </aside>
+                                          <aside class="entry-aside">
+                                <a href="https://creatorquest.jp/lessons/html/meta-character/" class="button-jambo button-jambo-left icon-arrow-back-primary-1">
+                    <h2 class="button-jambo-title">Previous</h2>
+                    <p class="button-jambo-text">
+                      <span class="button-jambo-text-caption">Chapter04</span>
+                      文字コードと文字化け対策                    </p>
+                </a>
+                                                <a href="https://creatorquest.jp/lessons/html/p-and-hn/" class="button-jambo button-jambo-right icon-arrow-primary-1">
+                    <h2 class="button-jambo-title">Next</h2>
+                    <p class="button-jambo-text">
+                      <span class="button-jambo-text-caption">Chapter06</span>
+                      段落と見出しの要素                    </p>
+                </a>
+                              </aside>
+                        </div><!-- .panel -->
+      </div><!-- .fixed-main -->
+
+    </div><!-- /.l-wrapper -->
+  </div><!-- /.l-section-secondary -->
+</main>
+<aside class="ads-wrap ads-wrap-bg-secondary">
+  <div class="l-wrapper">
+    <div class="ads big-banner">
+      <h2 class="ads-title screen-reader-text">スポンサーリンク</h2>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- cq-contentBottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2709478295930981"
+     data-ad-slot="6214233455"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>    </div>
+  </div>
+</aside>
+<aside class="ads-wrap ads-wrap-bg-secondary2">
+  <div class="l-wrapper">
+    <p class="ads-salon-text" style="line-height:1.8; text-align: center">
+            CreatorQuestの中の人<small>（<a href="https://twitter.com/hilosiva" target="_blank">@hilosiva</a>）</small>がオンラインサロンやってます。<br>
+            フロント系Webクリエーター養成所「<a href="https://camp-fire.jp/projects/view/96755" target="_blank" onclick="ga('send', 'event', 'ads','click', this.href, 1 );">Shibajuku</a>」
+          </p>
+  </div>
+  <!-- /.l-wrapper -->
+</aside>
+<!-- <aside class="ads-wrap ads-wrap-bg-secondary2">
+  <div class="l-wrapper">
+    <div class="ads ads-salon">
+      <h2 class="l-section-title">
+        <span class="l-section-title-label">Online Salon</span><br>
+          3期生の募集を定員20名で検討しています。
+      </h2>
+
+      <div class="l-grid-wrap l-grid-justify">
+        <div class="l-grid-item grid-lap-6">
+          <img src="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/facebook.png" srcset="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/facebook.png, ?php echo esc_url( get_bloginfo('template_url').'/assets/images/common/facebook@2x.png' ); ?> 2x" alt="オンラインサロン" class="">
+        </div>
+        <div class="l-grid-item grid-lap-6">
+                    <p class="ads-salon-text" style="line-height:1.8;">
+            CreatorQuestの中の人<small>（<a href="https://twitter.com/Hiro_Shiva" target="_blank">@Hiro_Shiva</a>）</small>が、オンラインでWebクリエーターを養成する塾をはじめました。<br>
+            非公開のFacebookグループを活用して、ライブ授業でWebサイト制作のスキルをわいわい養ったり、楽しそうと思ったWebサイトを立ち上げたり、運営したりします。<br>
+            独学とスクールの間の新しい学習環境をご提供します。<br>
+            ご質問は、<a href="https://twitter.com/Hiro_Shiva" target="_blank">Twitter<small>（@Hiro_Shiva）</small></a>にDMにてご連絡ください。
+          </p>
+        </div>
+
+      </div>
+      <p class="l-section-button-wrap">
+        <a href="https://camp-fire.jp/projects/view/96755" target="_blank" class="js-button button-primary button-cyan icon-button-next-arrow" onclick="ga('send', 'event', 'ads','click', this.href, 1 );">オンラインサロンの詳細へ</a>
+      </p>
+    </div>
+  </div>
+</aside> -->
+<footer class="l-footer" role="contentinfo">
+
+<nav class="breadcrumb" itemprop="Breadcrumb">
+<h2 class="screen-reader-text">パンくずナビゲーション</h2>
+	<div class="l-wrapper">
+		<div id="first" class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" itemref="second">
+			<a href="https://creatorquest.jp" itemprop="url" class="breadcrumb-link">
+				<span itemprop="title" class="breadcrumb-title"><span class="screen-reader-text">トップページ</span><i class="breadcrumb-icon material-icons">home</i></span>
+			</a><span class="breadcrumb-separate"><i class="breadcrumb-icon material-icons">chevron_right</i></span>
+		</div>
+		<div id="second" class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child" itemref="third">
+			<a href="https://creatorquest.jp/lessons/" itemprop="url" class="breadcrumb-link">
+				<span itemprop="title" class="breadcrumb-title">レッスン</span>
+			</a><span class="breadcrumb-separate"><i class="breadcrumb-icon material-icons">chevron_right</i></span>
+		</div>
+		<div id="third" class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child" itemref="fourth">
+			<a href="https://creatorquest.jp/lessons/html/" itemprop="url" class="breadcrumb-link">
+				<span itemprop="title" class="breadcrumb-title">HTML 入門</span>
+			</a><span class="breadcrumb-separate"><i class="breadcrumb-icon material-icons">chevron_right</i></span>
+		</div>
+		<div id="fourth" class="breadcrumb-item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child">
+			<a href="https://creatorquest.jp/lessons/html/category-and-rule/" itemprop="url" class="breadcrumb-link is-active">
+				<span itemprop="title" class="breadcrumb-title">要素の配置ルールとカテゴリー</span>
+			</a>
+		</div>
+	</div>
+</nav><!-- /.breadcrumb -->
+  <div class="l-wrapper">
+    <div class="l-footer-top">
+      <div class="l-footer-nav-wrap">
+        <div class="l-footer-nav">
+          <h2 class="l-footer-nav-title">Lessons</h2>
+          <ul class="l-footer-nav-list">
+                        <li><a href="https://creatorquest.jp/lessons/">全てのレッスン</a></li>
+                        <li><a href="https://creatorquest.jp/course/web-director/">WEBディレクターコース</a></li>
+                        <li><a href="https://creatorquest.jp/course/web-designer/">WEBデザイナーコース</a></li>
+                        <li><a href="https://creatorquest.jp/course/web-programmer/">WEBプログラマーコース</a></li>
+                        <li><a href="https://creatorquest.jp/course/front-end-engineer/">フロントエンドエンジニアコース</a></li>
+                    </ul>
+        </div>
+        <!-- /.l-footer-nav -->
+        <div class="l-footer-nav">
+          <h2 class="l-footer-nav-title">Reference</h2>
+          <ul class="l-footer-nav-list">
+                        <li><a href="https://creatorquest.jp/reference/html/">HTML</a></li>
+                    </ul>
+        </div>
+        <!-- /.l-footer-nav -->
+        <div class="l-footer-nav">
+          <h2 class="l-footer-nav-title">Follow Us</h2>
+          <ul class="l-footer-nav-list">
+            <li><a href="https://www.facebook.com/CreatorQuest/" target="_blank">facebook</a></li>
+            <li><a href="https://twitter.com/Creator_Quest" target="_blank">twitter</a></li>
+            <li><a href="https://www.youtube.com/channel/UCYozl5IpLYj5nZqy9y65s3g" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+        <!-- /.l-footer-nav -->
+      </div>
+      <!-- /.l-footer-nav-wrap -->
+      <div class="l-footer-news">
+        <div class="fb-page" data-href="https://www.facebook.com/CreatorQuest/" data-tabs="timeline" data-width="500" data-height="240" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/CreatorQuest/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CreatorQuest/">CreatorQuest</a></blockquote></div>
+      </div>
+      <!-- /.l-footer-news -->
+    </div>
+    <!-- /.l-footer-top -->
+    <div class="l-footer-bottom">
+      <div class="l-footer-title-wrap">
+        <p class="l-footer-title">
+          <a href="https://creatorquest.jp" class="l-footer-logo">
+            <span class="screen-reader-text">CreatorQuest</span>
+            <svg class="logo-secondary">
+                <title>CreatorQuest</title>
+                <use xlink:href="#logo-primary"/>
+                <foreignObject display="none">
+                  <img src="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/logo-primary.png" width="146" height="20" alt="CreatorQuest">
+                  </foreignObject>
+              </svg>
+          </a>
+        </p>
+        <ul class="l-footer-link">
+                    <li><a href="https://creatorquest.jp/terms/">利用規約</a></li>
+                    <li><a href="https://creatorquest.jp/privacy/">プライバシーポリシー</a></li>
+                    <li><a href="https://creatorquest.jp/contact/">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="l-footer-siteinfo">
+        <p class="copyright">
+          <small>
+            &copy; 2022 <a href="https://creatorquest.jp/contact/">CreatorQuest</a> All Rights Reserved.
+          </small>
+        </p>
+      </div>
+      <!-- /.l-footer-siteinfo -->
+    </div>
+    <!-- /.l-footer-bottom -->
+  </div>
+  <!-- /.l-wrapper -->
+</footer>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-includes/js/jquery/ui/effect.min.js?ver=1.12.1' id='jquery-effects-core-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.12.1' id='jquery-effects-highlight-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/plugins/gianism/assets/js/js.cookie.js?ver=2.1.3' id='js-cookie-js'></script>
+<script type='text/javascript' id='gianism-notice-helper-js-extra'>
+/* <![CDATA[ */
+var GianismHelper = {"confirmLabel":"\u540c\u610f\u304c\u5fc5\u8981\u3067\u3059","btnConfirm":"\u78ba\u8a8d","btnCancel":"\u30ad\u30e3\u30f3\u30bb\u30eb"};
+var Gianism = {"admin":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/plugins/gianism/assets/js/public-notice.js?ver=4.4.0' id='gianism-notice-helper-js'></script>
+<script type='text/javascript' id='cq-common-js-extra'>
+/* <![CDATA[ */
+var _wpcc = {"ajaxurl":"https:\/\/creatorquest.jp\/wp\/wp-admin\/admin-ajax.php","nonce":"792eb4f53a","post_id":"37"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/common.min.js' id='cq-common-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/lib/prism.min.js' id='prism-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/youtube-api.js' id='youtube-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/fixed-sidebar.js' id='fixed-sidebar-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/lib/flexibility.min.js' id='flex-js'></script>
+<script type='text/javascript' src='https://creatorquest.jp/wp/wp-includes/js/wp-embed.min.js?ver=5.8.3' id='wp-embed-js'></script>
+    
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CreatorQuest",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/images/common/logo-primary.png",
+        "width": 146,
+        "height": 20
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "サイトマスター"
+    },
+    "datePublished": "2016/11/01 11:40:20",
+    "dateModified": "2017/07/18 12:36:26",
+    "name": "CreatorQuest",
+    "headline": "要素の配置ルールとカテゴリー",
+    "description": "要素の配置ルールであるコンテンツ・モデルを理解しましょう。",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://creatorquest.jp/wp/wp-content/uploads/2016/11/html05.png",
+      "height": 1080,
+      "width": 1920
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://creatorquest.jp/lessons/html/category-and-rule/"
+    }
+  }
+
+</script>
+    <!--[if lt IE 9]>
+<script src="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/lib/html5shiv.js"></script>
+<script src="https://creatorquest.jp/wp/wp-content/themes/creatorquest/assets/js/lib/respond.min.js"></script>
+<![endif]-->
+</body>
+</html>
